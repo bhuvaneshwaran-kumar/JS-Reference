@@ -9,9 +9,10 @@
 
 ---
 
-```
-    so when the event occurs or the setTimeout expires or the promise is returned then the respective callBacks will be sent to the respective Queue's.
-```
+    so when the event occurs or the setTimeout
+    expires or the promise is returned then the
+    respective callBacks will be sent to the
+    respective Queue's.
 
 > So now we need to send the callBacks through the respective Queue's to the callStack.
 
