@@ -12,7 +12,7 @@ You can use the --force flag so that you can update both react and react-dom lib
 
 - The new ReactDOM.createRoot() API replacing ReactDOM.render()
 - Batching improvements for fewer renders
-- SSR support for <Suspense> component
+- SSR support for `<Suspense> `component
 - startTransition API for non-urgent state updates
 
 ---
@@ -72,6 +72,27 @@ import { startTransition} from "react";
       });
     });
   };
-
-
 ```
+
+---
+
+## 4.SSR support for `<Suspense>`
+
+The `<Suspense> `component is a feature of React library that allows you to wait for some code to load by adding a fallback component to render before the code is loaded.
+Here’s an example of `<Suspense> `in action:
+
+```JS
+<Suspense fallback={<LoadingSpinner />}>
+  <UserProfile />
+<Suspense />
+```
+
+You can read about `<Suspense> `in depth from React documentation.
+
+In React 18, the `<Suspense> `feature is supported even when you render your components on the server using SSR. This update allows you to wrap server rendered components inside a `<Suspense> `component.
+
+Any server side components wrapped inside `<Suspense> `will be streamed as HTML using the fallback component first, and once the component is ready, React will send new bits of HTML to replace the fallback component.
+
+---
+
+<center>@ Reference : [**Click Here**](https://blog.bitsrc.io/trying-out-react-18-alpha-release-bad9aed12bee)</center>

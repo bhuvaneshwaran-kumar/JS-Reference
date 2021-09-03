@@ -1,6 +1,11 @@
 import "./App.css";
 import { useState, startTransition, useEffect } from "react";
+import { createResouse } from "./PersonApi";
+import { Suspense } from "react";
+import Person from "./Person";
 // import { flushSync } from "react-dom";
+
+const resource = createResouse();
 
 function App() {
   const [, setClickCount] = useState(0);
@@ -59,13 +64,6 @@ function App() {
     });
   };
 
-  useEffect(() => {
-    console.log(suggestSearch);
-  }, [suggestSearch]);
-  useEffect(() => {
-    console.log("value Onchange");
-  }, [searchValue]);
-
   return (
     <div className="App">
       Hello, world
@@ -86,6 +84,12 @@ function App() {
           <li key={index}>{data}</li>
         ))}
       </ul>
+      <br />
+      <br />
+      <br />
+      <Suspense fallback={<p>Loading...</p>}>
+        <Person resource={resource} />
+      </Suspense>
     </div>
   );
 }
