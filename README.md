@@ -95,4 +95,4 @@ Any server side components wrapped inside `<Suspense> `will be streamed as HTML 
 
 ---
 
-<center>@ Reference : [**Click Here**](https://blog.bitsrc.io/trying-out-react-18-alpha-release-bad9aed12bee)</center>
+@Reference : [**Click Here**](https://blog.bitsrc.io/trying-out-react-18-alpha-release-bad9aed12bee)
