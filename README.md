@@ -37,3 +37,9 @@ root.render(<App />);
 ---
 
 ## Automatic batching improvements for rendering
+
+**Batching** is mechanism used by React to group multiple state updates into one re-render. With batching, you will avoid unnecessary renders and optimize the rendering process
+
+However, the batching mechanism implemented in React 17 was not consistent. The batching won’t happen when you call the state update methods from a callback.
+
+**React 18** solved the problem above by improving the batching mechanism.
