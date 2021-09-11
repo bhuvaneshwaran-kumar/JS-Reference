@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCounter } from "../context/UserProvider";
 
 
 function About() {
     const [count] = useCounter();
-
+    useEffect(() => {
+        let callBack = () => console.log('resizeing Window.')
+        window.addEventListener('resize', callBack)
+        return () => window.removeEventListener('resize', callBack)
+    }, [])
     return (
         <div>
             <center>

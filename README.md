@@ -25,6 +25,12 @@ useState() is a hook that lets you add react state to functional component.
      provide the context
      consume it
 
+---
+
+# useReducer
+
+    useReducer is usually preferable to useState when you have complex state logic
+
 # Lifting State Up.
 
     we can also able to pass methods that actually manupulate the state as a prop.
