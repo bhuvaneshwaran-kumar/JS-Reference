@@ -31,6 +31,16 @@ useState() is a hook that lets you add react state to functional component.
 
     useReducer is usually preferable to useState when you have complex state logic
 
+---
+
+# useMemo
+
+    it caches the value from previous render.
+
+# useCallback
+
+    it is useFull when passing callbacks to optimized (pure || React.memo()) child components that rely on refrence equality to prevent unnecessary renders.
+
 # Lifting State Up.
 
     we can also able to pass methods that actually manupulate the state as a prop.

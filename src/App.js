@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import About from "./pages/About";
 import KeepCount from "./pages/KeepCount";
+import OptimiseCounter from "./pages/OptimiseCounter";
+import UseCallBack from "./pages/UseCallBack.js";
 function App() {
   const [timeInSeconds, setTimeInSeconds] = useState(100);
   const timer = useRef();
@@ -26,6 +28,12 @@ function App() {
         <p>
           <Link to="/counter">Go to Counter</Link>
         </p>
+        <p>
+          <Link to="/optimize-counter">Go to Memo Counter</Link>
+        </p>
+        <p>
+          <Link to="/optimize-counter-use-callback">Go to useCallback Counter</Link>
+        </p>
       </center>
 
       <Switch>
@@ -37,6 +45,12 @@ function App() {
         </Route>
         <Route path="/counter" exact>
           <KeepCount />
+        </Route>
+        <Route path="/optimize-counter" exact>
+          <OptimiseCounter />
+        </Route>
+        <Route path="/optimize-counter-use-callback" exact>
+          <UseCallBack />
         </Route>
       </Switch>
     </div>

@@ -8,7 +8,7 @@ import CounterReducer, { InitialState } from './reducers/CounterReducer'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <UserProvider reducer={CounterReducer} state={InitialState}>
+      <UserProvider state={InitialState} reducer={CounterReducer}>
         <App />
       </UserProvider>
     </Router>
