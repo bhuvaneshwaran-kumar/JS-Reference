@@ -1,13 +1,13 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useReducer } from 'react'
 
 const userContext = createContext()
 
-function UserProvider({ children }) {
-    const [count, setCount] = useState(0)
+function UserProvider({ children, state, reducer }) {
+    // const [count, setCount] = useState(0)
     return (
-        <userContext.Provider value={[count, setCount]}>
+        <userContext.Provider value={useReducer(reducer, state)}>
             {children}
-        </userContext.Provider>
+        </userContext.Provider >
     )
 }
 

@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import UserProvider from './context/UserProvider'
+import CounterReducer, { InitialState } from './reducers/CounterReducer'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <UserProvider >
+      <UserProvider reducer={CounterReducer} state={InitialState}>
         <App />
       </UserProvider>
     </Router>
