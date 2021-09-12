@@ -1,3 +1,12 @@
+# Unidirectional Data Flow in React
+
+- state is passed to the view and to child components
+- actions are triggered by the view
+- actions can update the state
+- the state change is passed to the view and to child
+
+---
+
 # Hooks.
 
 ## What and why react hooks.
@@ -84,5 +93,13 @@ The three phases are: Mounting, Updating, and Unmounting.
 <></>
 
 ---
+
+# Redux.
+
+Redux is a predictable state container for JavaScript apps.
+
+# Redux Middleware
+
+Redux middleware  provides a third-party extension point between dispatching an action and the moment it reaches the reducers.
 
 SwagerApi Doc.

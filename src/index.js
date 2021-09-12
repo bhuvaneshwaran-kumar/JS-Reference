@@ -5,12 +5,15 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import UserProvider from './context/UserProvider'
 import CounterReducer, { InitialState } from './reducers/CounterReducer'
+import StoreProvider from './store'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <UserProvider state={InitialState} reducer={CounterReducer}>
+      {/* <UserProvider state={InitialState} reducer={CounterReducer}> */}
+      <StoreProvider>
         <App />
-      </UserProvider>
+      </StoreProvider>
+      {/* </UserProvider> */}
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

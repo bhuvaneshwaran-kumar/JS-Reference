@@ -1,9 +1,10 @@
 import { useRef, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import About from "./pages/About";
-import KeepCount from "./pages/KeepCount";
-import OptimiseCounter from "./pages/OptimiseCounter";
+// import KeepCount from "./pages/KeepCount";
+// import OptimiseCounter from "./pages/OptimiseCounter";
 import UseCallBack from "./pages/UseCallBack.js";
+import ReduxComp from "./pages/Redux";
 function App() {
   const [timeInSeconds, setTimeInSeconds] = useState(100);
   const timer = useRef();
@@ -34,6 +35,9 @@ function App() {
         <p>
           <Link to="/optimize-counter-use-callback">Go to useCallback Counter</Link>
         </p>
+        <p>
+          <Link to="/redux">Go to Redux</Link>
+        </p>
       </center>
 
       <Switch>
@@ -44,13 +48,16 @@ function App() {
           <About />
         </Route>
         <Route path="/counter" exact>
-          <KeepCount />
+          {/* <KeepCount /> */}
         </Route>
         <Route path="/optimize-counter" exact>
-          <OptimiseCounter />
+          {/* <OptimiseCounter /> */}
         </Route>
         <Route path="/optimize-counter-use-callback" exact>
           <UseCallBack />
+        </Route>
+        <Route path="/redux" exact>
+          <ReduxComp />
         </Route>
       </Switch>
     </div>
