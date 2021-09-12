@@ -14,43 +14,50 @@ useState() is a hook that lets you add react state to functional component.
 
 # useRef :
 
-    useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
 
 ---
 
 # useContext:
 
-    context provides a way to pass data through the component tree without having to pass props down manually at every leve.
-     create a context.
-     provide the context
-     consume it
+context provides a way to pass data through the component tree without having to pass props down manually at every leve.
+
+- create a context.
+- provide the context
+- consume it
 
 ---
 
 # useReducer
 
-    useReducer is usually preferable to useState when you have complex state logic
+useReducer is usually preferable to useState when you have complex state logic
 
 ---
 
 # useMemo
 
-    it caches the value from previous render.
+it caches the value from previous render.
 
 # useCallback
 
-    it is useFull when passing callbacks to optimized (pure || React.memo()) child components that rely on refrence equality to prevent unnecessary renders.
+it is useFull when passing callbacks to optimized (pure || React.memo()) child components that rely on refrence equality to prevent unnecessary renders.
+
+---
+
+# Higher-Order Components
+
+A higher-order component (HOC) is an advanced technique in React for reusing component logic.
 
 # Lifting State Up.
 
-    we can also able to pass methods that actually manupulate the state as a prop.
-    now if the state got updated by child component the changes will be synchronized in all the components which uses the state.
+we can also able to pass methods that actually manupulate the state as a prop.
+now if the state got updated by child component the changes will be synchronized in all the components which uses the state.
 
 ---
 
 # Keys.
 
-    Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity
 
 probllem using index as a key.
 
@@ -68,9 +75,9 @@ probllem using index as a key.
 
 # React Lifecycle.
 
-    Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
 
-    The three phases are: Mounting, Updating, and Unmounting.
+The three phases are: Mounting, Updating, and Unmounting.
 
 # Fragments
 
